@@ -1,0 +1,23 @@
+.cartButton {
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .cartIcon {
+    width: 30px; 
+    height: 30px; 
+  }
+  
+  .cartCount {
+    background-color: #ff0000; 
+    color: white; 
+    font-size: 16px; 
+    border-radius: 50%; 
+    padding: 2px 6px; 
+    position: absolute; 
+    top: 5px;
+    right: 5px;
+  }
+  
