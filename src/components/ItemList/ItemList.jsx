@@ -1,9 +1,11 @@
+import Item from "../Item/Item"
+
 const ItemList = ({products}) => {
     return (
         <section>
             {
-                products.map(product => {
-                    return <p key={product.id}>{product.name}</p>
+                products.map(products => {
+                    return <Item key={products.id} { ...products}/>
                 })
             }
         </section>
@@ -11,3 +13,4 @@ const ItemList = ({products}) => {
 }
 
 export default ItemList
+
