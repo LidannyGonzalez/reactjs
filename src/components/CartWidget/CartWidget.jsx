@@ -1,14 +1,21 @@
-import React from "react";
-import styles from "./CartWidget.module.css"; 
-import carrito from "./assets/carrito.png";
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
 
 const CartWidget = () => {
-  return (
-    <button className={styles.cartButton}>
-      <img src={carrito} alt="carrito" className={styles.cartIcon} />
-      <span className={styles.cartCount}>0</span>
-    </button>
-  );
+    const { cart } = useContext(CartContext);
+    let totalItems = 0;
+
+    // Calcular el total de elementos en el carrito
+    for (const item of cart) {
+        totalItems += item.quantity;
+    }
+
+    return (
+        <div>
+            <Link to="/cart">Carro ({totalItems})</Link>
+        </div>
+    );
 };
 
 export default CartWidget;
