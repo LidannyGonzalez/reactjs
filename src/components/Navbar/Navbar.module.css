@@ -4,11 +4,16 @@
     align-items: center;
     background-color: #696767;
     color: white;
-    padding: 10px 20px;
+    padding: 1rem;
+  }
+
+  header a {
+    margin-right: 40px;
   }
   
   .nav {
     display: flex;
+    gap: 1,8rem;
   }
   
   .nav a {
@@ -29,3 +34,8 @@
     cursor: pointer;
   }
   
+  /* Estilos para el icono del carrito */
+.cartIcon {
+  width: 30px; /* Ajusta el ancho del icono según tus necesidades */
+  height: auto; /* Permite que la altura se ajuste automáticamente según el ancho */
+}

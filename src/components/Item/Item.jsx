@@ -13,4 +13,3 @@ const Item = ({ id, name, category, price, img }) => {
 }
 
 export default Item
-

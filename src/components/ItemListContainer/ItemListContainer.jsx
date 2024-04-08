@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { getDocs, collection, query, where } from 'firebase/firestore';
 import { db } from "../../services/firebase/firebaseConfig";
 
+
 const ItemListMemoized = memo(ItemList);
 
 const ItemListContainer = ({ greeting }) => {
@@ -30,7 +31,7 @@ const ItemListContainer = ({ greeting }) => {
     }, [categoryId]);
 
     return (
-        <div style={{ background: 'orange' }} onClick={() => console.log('Hiciste clic en ItemListContainer')}>
+        <div style = {{ textAlign:"center"}} onClick={() => console.log('Hiciste clic en ItemListContainer')}>
             <h1>{greeting}</h1>
             <ItemListMemoized products={products} />
         </div>

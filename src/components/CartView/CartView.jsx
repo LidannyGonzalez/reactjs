@@ -1,27 +1,30 @@
-import { useContext } from 'react';
-import { CartContext } from '../../context/CartContext';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { CartContext } from '../../context/CartContext'; // Asegúrate de importar CartContext desde el archivo correcto
+import { Link } from 'react-router-dom'; 
 
 const CartView = () => {
-    const { cart } = useContext(CartContext);
-
-    // Calculate total quantity
-    const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
+    const { cart, getCartTotalPrice } = useContext(CartContext);
 
     return (
         <div>
-            <h1>Cart</h1>
-            <p>Total items: {totalQuantity}</p> {/* Display total quantity */}
-            <section>
-                {cart.map((prod) => {
-                    return (
-                        <article key={prod.id}>
-                            <h2>{prod.name}</h2>
-                        </article>
-                    );
-                })}
-            </section>
-            <Link to='/checkout'>Checkout</Link>
+            <h2>Carrito de compras</h2>
+            {cart.length > 0 ? (
+                <>
+                    <ul>
+                        {cart.map(item => (
+                            <li key={item.id}>
+                                <span>{item.name}</span>
+                                <span>Cantidad: {item.quantity}</span>
+                                <span>Precio unitario: ${item.price}</span>
+                            </li>
+                        ))}
+                    </ul>
+                    <p>Total: ${getCartTotalPrice()}</p>
+                    <Link to='/checkout'>Finalizar compra</Link>
+                </>
+            ) : (
+                <p>No hay productos en el carrito</p>
+            )}
         </div>
     );
 };

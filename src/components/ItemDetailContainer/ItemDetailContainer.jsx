@@ -35,7 +35,7 @@ const ItemDetailContainer = () => {
     }, [itemId]);
 
     return (
-        <div style={{ background: 'pink' }}>
+        <div>
             <h1>Detalle de producto</h1>
             <ItemDetail {...product} />
         </div>

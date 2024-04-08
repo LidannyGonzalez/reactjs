@@ -1,0 +1,171 @@
+/* Estilos para el contenedor principal de la aplicación */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f3f3; /* Fondo ligeramente más oscuro */
+  color: #333; /* Texto en tono oscuro */
+}
+
+/* Estilos para el contenedor de los productos */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centra los productos horizontalmente */
+  gap: 1rem; /* Espacio entre los productos */
+  padding: 1rem;
+}
+
+/* Estilos para cada artículo */
+article {
+  flex: 0 0 calc(33.33% - 1rem); /* Ancho para que quepan tres en una fila */
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+/* Estilos para los botones de cantidad dentro de cada artículo */
+article button {
+  background-color: #007bff; /* Azul oscuro para los botones */
+  color: #fff; /* Texto blanco */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  margin: 0 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+article button:hover {
+  background-color: #0056b3; /* Tonos más oscuros al pasar el mouse */
+}
+
+/* Estilos para los enlaces */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para el encabezado */
+header {
+  background-color: #333; /* Encabezado en azul oscuro */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Estilos para los enlaces de navegación */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #0a0238;
+}
+
+/* Estilos para el botón del carrito */
+.cartButton {
+  background-color: #0a0238;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cartButton:hover {
+  background-color: #0a0238;
+}
+
+/* Estilos para el icono del carrito */
+.cartIcon {
+  width: 30px;
+  height: auto;
+}
+/* Estilos para el artículo */
+article {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Estilos para el encabezado */
+article header {
+  margin-bottom: 10px;
+}
+
+/* Estilos para el título */
+article h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* Estilos para la imagen */
+article picture {
+  margin-bottom: 10px;
+}
+
+/* Estilos para la imagen dentro del contenedor picture */
+article img {
+  width: 100px;
+  border-radius: 4px;
+}
+
+/* Estilos para la sección de información */
+article section {
+  margin-bottom: 10px;
+}
+
+/* Estilos para los párrafos dentro de la sección de información */
+article section p {
+  margin: 5px 0;
+}
+
+/* Estilos para el pie de página */
+article footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilos para los botones de cantidad */
+article button {
+  padding: 8px 16px;
+  background-color: #646cff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilos para los botones de cantidad al pasar el mouse */
+article button:hover {
+  background-color: #4444ff;
+}
+
+/* Estilos para el enlace de finalizar compra */
+article footer a {
+  text-decoration: none;
+  color: #646cff;
+  font-weight: bold;
+}
+
+/* Estilos para el enlace de finalizar compra al pasar el mouse */
+article footer a:hover {
+  text-decoration: underline;
+}

@@ -6,7 +6,6 @@ const CartWidget = () => {
     const { cart } = useContext(CartContext);
     let totalItems = 0;
 
-    // Calcular el total de elementos en el carrito
     for (const item of cart) {
         totalItems += item.quantity;
     }
@@ -19,3 +18,4 @@ const CartWidget = () => {
 };
 
 export default CartWidget;
+

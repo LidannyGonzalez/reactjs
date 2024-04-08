@@ -57,8 +57,6 @@ const ItemDetail = ({ id, name, category, img, price, stock, description }) => {
         setQuantity(count); // Actualizar la cantidad en el estado local
     };
 
-    console.log('Cantidad actual en el estado local:', quantity);
-
     return (
         <article>
             <button onClick={() => setInputType(inputType === 'input' ? 'button' : 'input')}>
@@ -80,7 +78,7 @@ const ItemDetail = ({ id, name, category, img, price, stock, description }) => {
                     <ItemCount onAdd={handleOnAdd} stock={stock}/>
                 ) : (
                     <>
-                        <Link to='/carrito'>Finalizar compra</Link>
+                        <Link to='/cart'>Finalizar compra</Link>
                     </>
                 )}
             </footer>
@@ -88,4 +86,4 @@ const ItemDetail = ({ id, name, category, img, price, stock, description }) => {
     );
 };
 
-export default ItemDetail;
+export default ItemDetail;

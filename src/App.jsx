@@ -5,6 +5,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import CartView from "./components/CartView/CartView";
 import Checkout from './components/Checkout/Checkout';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'; // Asegúrate de importar ItemDetailContainer si se necesita
+import "./styles/styles.css";
 
 const App = () => {
 
